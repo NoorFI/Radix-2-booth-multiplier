@@ -63,7 +63,7 @@ module datapath #(parameter N = 8)(
                 default: next_A = A; //No change
             endcase
 
-            //Radix2 Shift (1-bit arithmetic shift)
+            //Radix2 Shift (1-bit arithmetic right shift)
             temp = {next_A, Q, Qminus1};
             temp = temp >>> 1;
             {A, Q, Qminus1} <= temp;
