@@ -67,6 +67,8 @@ module datapath #(parameter N = 8)(
             temp = {next_A, Q, Qminus1};
             temp = temp >>> 1;
             {A, Q, Qminus1} <= temp;
+            if(counter == 1)
+              product <= temp[2*N:1];
             counter <= counter - 1;
         end
       
