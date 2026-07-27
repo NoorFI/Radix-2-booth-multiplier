@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 //Booth encoder basically takes the pair as input and outputs the appropriate operation to be performed.
-module booth_decoder(
+module booth_encoder(
     input  logic [1:0] booth_bits,
     output logic [1:0] opcode
 );
